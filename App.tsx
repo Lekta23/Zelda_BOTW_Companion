@@ -23,7 +23,12 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <SafeAreaView style={styles.container}>
+        <ImageBackground
+          source={image}
+          style={styles.backgroundImage}
+        >
           <Navigators />
+        </ImageBackground>
       </SafeAreaView>
     </QueryClientProvider>
   );
@@ -38,5 +43,7 @@ const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
     justifyContent: 'center',
+    minHeight: "100%",
+    width: "100%"
   },
 });

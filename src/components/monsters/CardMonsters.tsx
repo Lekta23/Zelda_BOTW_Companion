@@ -1,6 +1,8 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import { Button, Card, Paragraph, Title } from "react-native-paper";
+import { AppRoutes } from "../navigate/AppRoute";
+import { useNavigation } from "@react-navigation/native";
 
 type MonstersProps = {
   id: string;
@@ -11,21 +13,24 @@ type MonstersProps = {
   drop: Array<String>;
 };
 
-const CardMonsters = ({ item }: any) => {
+const CardMonsters = ({item }: MonstersProps) => {
+  const navigation = useNavigation();
+  console.log(item);
+  
   return (
     <Card style={styles.card}>
       <Card.Cover source={{ uri: item.image }} />
       <Card.Title titleStyle={styles.text} title={item.name} />
       <Card.Content>
         <Paragraph>{item.description}</Paragraph>
-        {item.common_locations?.map((locations: any) => {
-          <Text>{locations}</Text>;
-        })}
-        {item.drop?.map((dropable: any) => {
-          <Text>{dropable}</Text>;
-        })}
       </Card.Content>
-      <Button>Detail</Button>
+      {/* <Button
+        onPress={() =>
+          navigation.navigate(AppRoutes.MONSTERSDETAIL_SCREEN, { item })
+        }
+      >
+        Detail
+      </Button> */}
     </Card>
   );
 };
