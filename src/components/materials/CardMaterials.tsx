@@ -1,35 +1,28 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
-import { Button, Card, Paragraph, Title } from "react-native-paper";
-import { AppRoutes } from "../navigate/AppRoute";
 import { useNavigation } from "@react-navigation/native";
+import { Card, Paragraph } from "react-native-paper";
 
-type MonstersProps = {
-  id: string;
-  common_locations?: Array<String>;
-  description: string;
-  image: string;
-  name: string;
-  drop: Array<String>;
-};
+type Props = {};
 
-const CardMonsters = ({item }: any) => {
+const CardMaterials = ({item}: any) => {
   const navigation = useNavigation();
-  
+  console.log(item);
   return (
     <Card style={styles.card}>
       <Card.Cover source={{ uri: item.image }} />
       <Card.Title titleStyle={styles.text} title={item.name} />
       <Card.Content>
         <Paragraph>{item.description}</Paragraph>
+        <Paragraph>Cooking Effect : {item.cooking_effect}</Paragraph>
       </Card.Content>
       {/* <Button
-        onPress={() =>
-          navigation.navigate(AppRoutes.MONSTERSDETAIL_SCREEN, { item })
-        }
-      >
-        Detail
-      </Button> */}
+          onPress={() =>
+            navigation.navigate(AppRoutes.MONSTERSDETAIL_SCREEN, { item })
+          }
+        >
+          Detail
+        </Button> */}
     </Card>
   );
 };
@@ -53,4 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CardMonsters;
+export default CardMaterials;

@@ -19,7 +19,7 @@ const HomeScreen = (props : any) => {
             Material
           </Button>
           <Button style={styles.button} icon="treasure-chest" color='black' mode="contained" onPress={() => {props.navigation.navigate(AppRoutes.TEASURE_SCREEN)}}>
-            Teasure
+            Treasure
           </Button>
           <Button style={styles.button} icon="horseshoe" color='black' mode="contained" onPress={() => {props.navigation.navigate(AppRoutes.CREATURES_SCREEN)}}>
             Creatures

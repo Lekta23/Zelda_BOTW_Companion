@@ -1,13 +1,31 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import CardMaterials from '../materials/CardMaterials';
+import { useMaterial } from '../hooks/UseMaterial';
 
 type Props = {};
 
 const MaterialScreen = (props: Props) => {
+  const { isLoading, isError, data } = useMaterial();
+
+  if (isLoading) {
+    return <Text>Loading…</Text>;
+  }
+  if (isError) {
+    return <Text>Something bad happened…</Text>;
+  }
+
+  const renderItemMaterial = (props: any) => <CardMaterials {...props} />;
   return (
-    <View>
-      <Text>MaterialScreen</Text>
-    </View>
+    <>
+    {data && (
+      <FlatList
+        data={data.data}
+        renderItem={renderItemMaterial}
+        keyExtractor={(item) => item.id}
+      />
+    )}
+  </>
   );
 };
 
