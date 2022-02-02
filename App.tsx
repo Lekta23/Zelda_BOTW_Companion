@@ -1,20 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useFonts } from "expo-font";
+import React from "react";
+import {
+  ImageBackground,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+import { QueryClient, QueryClientProvider } from "react-query";
+import Navigators from "./src/components/navigate/Navigators";
 
 export default function App() {
+  const image = { uri: "https://react-sheikah-ui.vercel.app/bg-dark.jpg" };
+
+  const [loaded] = useFonts({
+    HyliaSerifBeta: require('./assets/fonts/HyliaSerifBeta-Regular.otf'),
+  });
+
+  
+
+  const queryClient = new QueryClient();
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <QueryClientProvider client={queryClient}>
+      <SafeAreaView style={styles.container}>
+          <Navigators />
+      </SafeAreaView>
+    </QueryClientProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    fontFamily: 'HyliaSerifBeta',
+  },
+
+  backgroundImage: {
+    flex: 1,
     justifyContent: 'center',
   },
 });
