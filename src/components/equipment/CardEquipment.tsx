@@ -9,7 +9,7 @@ type Props = {
     description: string,
 };
 
-const CardEquipment = ({item}: Props) => {
+const CardEquipment = ({item}: any) => {
     console.log(item);
     
     const navigation = useNavigation();

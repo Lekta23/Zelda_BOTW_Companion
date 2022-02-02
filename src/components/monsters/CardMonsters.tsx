@@ -13,7 +13,7 @@ type MonstersProps = {
   drop: Array<String>;
 };
 
-const CardMonsters = ({item }: MonstersProps) => {
+const CardMonsters = ({item }: any) => {
   const navigation = useNavigation();
   console.log(item);
   
