@@ -6,3 +6,6 @@ React Native application, which allows you to see all the categories (Creatures,
 npm i 
 npm start
 
+
+# Expo link 
+https://expo.dev/@lekta/projects/Zelda_BOTW_Companion
