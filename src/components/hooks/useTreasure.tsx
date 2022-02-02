@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 
 async function fetchDataTreasure() {
-    const result = await fetch('https://botw-compendium.herokuapp.com/api/v2/category/teasure');
+    const result = await fetch('https://botw-compendium.herokuapp.com/api/v2/category/treasure');
     const json = await result.json();
     return json;
 }

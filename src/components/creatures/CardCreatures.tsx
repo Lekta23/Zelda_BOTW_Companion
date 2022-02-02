@@ -9,7 +9,8 @@ type Props = {
     description: string,
 };
 
-const CardEquipment = ({item}: any) => {
+const CardCreatures = ({item}: any) => {
+    
     
     const navigation = useNavigation();
     return (
@@ -18,7 +19,6 @@ const CardEquipment = ({item}: any) => {
         <Card.Title titleStyle={styles.text} title={item.name} />
         <Card.Content>
           <Paragraph>{item.description}</Paragraph>
-          <Paragraph>Attack : {item.attack} - Defense : {item.defense}</Paragraph>
         </Card.Content>
         {/* <Button
           onPress={() =>
@@ -50,4 +50,4 @@ const CardEquipment = ({item}: any) => {
     },
   });
 
-export default CardEquipment;
+export default CardCreatures;

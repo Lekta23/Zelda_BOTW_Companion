@@ -13,23 +13,23 @@ type MonstersProps = {
   drop: Array<String>;
 };
 
-const CardMonsters = ({item }: any) => {
+const CardMonsters = ({item}: any) => {
   const navigation = useNavigation();
   
   return (
-    <Card style={styles.card}>
+    <Card style={styles.card}         onPress={() =>
+      navigation.navigate(AppRoutes.MONSTERSDETAIL_SCREEN, { item })
+    }>
       <Card.Cover source={{ uri: item.image }} />
       <Card.Title titleStyle={styles.text} title={item.name} />
       <Card.Content>
         <Paragraph>{item.description}</Paragraph>
       </Card.Content>
-      {/* <Button
-        onPress={() =>
-          navigation.navigate(AppRoutes.MONSTERSDETAIL_SCREEN, { item })
-        }
+      <Button
+
       >
         Detail
-      </Button> */}
+      </Button>
     </Card>
   );
 };
