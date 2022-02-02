@@ -6,8 +6,8 @@ type Props = {
   navigation: any;
 };
 
-const CardMonstersDetail = ({ route, navigation }: Props) => {
-  const { id, common_locations, description, image, name, drops } =
+const CardEquipmentDetail = ({ route, navigation }: Props) => {
+  const { attack, description, image, name, defense,common_locations } =
     route.params.item;
 
   return (
@@ -15,9 +15,9 @@ const CardMonstersDetail = ({ route, navigation }: Props) => {
       <Image style={styles.img} source={{ uri: image }} />
       <Text style={styles.name}>{name}</Text>
       <Text style={styles.text}>{description}</Text>
-      <Text style={styles.text}>Location :{common_locations}</Text>
+      <Text style={styles.text}>Attack :{attack}--Defense :{defense}</Text>
 
-      <Text style={styles.text}>Drop :{drops}</Text>
+      <Text style={styles.text}>Locations : {common_locations}</Text>
     </View>
   );
 };
@@ -44,4 +44,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CardMonstersDetail;
+export default CardEquipmentDetail;

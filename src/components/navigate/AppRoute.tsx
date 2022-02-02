@@ -6,5 +6,6 @@ export enum AppRoutes {
   MONSTERS_SCREEN = "Monsters",
   TEASURE_SCREEN = "Treasure",
   MONSTERSDETAIL_SCREEN = "CardMonstersDetail",
+  EQUIPMENTDETAIL_SCREEN = "CardEquipmentDetail",
 
 }

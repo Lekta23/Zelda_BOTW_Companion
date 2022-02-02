@@ -10,6 +10,8 @@ import MaterialScreen from "../screens/MaterialScreen";
 import TreasureScreen from "../screens/TreasureScreen";
 import MonstersScreen from "../screens/MonstersScreen";
 import CardMonstersDetail from "../monsters/CardMonstersDetail";
+import CardEquipment from "../equipment/CardEquipment";
+import CardEquipmentDetail from "../equipment/CardEquipmentDetail";
 
 type Props = {};
 
@@ -43,6 +45,10 @@ const Navigators = (props: Props) => {
                     <Stack.Screen
             name={AppRoutes.MONSTERSDETAIL_SCREEN}
             component={CardMonstersDetail}
+          />
+                              <Stack.Screen
+            name={AppRoutes.EQUIPMENTDETAIL_SCREEN}
+            component={CardEquipmentDetail}
           />
         </Stack.Navigator>
       </NavigationContainer>

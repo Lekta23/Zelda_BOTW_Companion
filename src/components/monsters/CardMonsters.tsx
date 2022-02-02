@@ -15,7 +15,6 @@ type MonstersProps = {
 
 const CardMonsters = ({item}: any) => {
   const navigation = useNavigation();
-  
   return (
     <Card style={styles.card}         onPress={() =>
       navigation.navigate(AppRoutes.MONSTERSDETAIL_SCREEN, { item })
@@ -25,11 +24,6 @@ const CardMonsters = ({item}: any) => {
       <Card.Content>
         <Paragraph>{item.description}</Paragraph>
       </Card.Content>
-      <Button
-
-      >
-        Detail
-      </Button>
     </Card>
   );
 };
