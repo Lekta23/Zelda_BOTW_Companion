@@ -1,7 +1,7 @@
 import { View, Text, FlatList } from 'react-native';
 import React from 'react';
 import { useEquipment } from '../hooks/UseEquipment';
-import CardEquipment from '../equipment/CardEquipment';
+import CardEquipment from '../components/equipment/CardEquipment';
 
 type Props = {};
 

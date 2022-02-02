@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import { Button, Card, Paragraph, Title } from "react-native-paper";
-import { AppRoutes } from "../navigate/AppRoute";
+import { AppRoutes } from "../../navigate/AppRoute";
 import { useNavigation } from "@react-navigation/native";
 
 type MonstersProps = {

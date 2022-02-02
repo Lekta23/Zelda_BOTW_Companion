@@ -1,6 +1,6 @@
 import { View, Text, FlatList } from 'react-native';
 import React, { useState } from 'react';
-import CardCreatures from '../creatures/CardCreatures';
+import CardCreatures from '../components/creatures/CardCreatures';
 import {  useCreatures } from '../hooks/useCreature';
 import { Button, IconButton } from 'react-native-paper';
 

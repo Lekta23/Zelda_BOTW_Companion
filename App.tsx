@@ -8,7 +8,7 @@ import {
   View,
 } from "react-native";
 import { QueryClient, QueryClientProvider } from "react-query";
-import Navigators from "./src/components/navigate/Navigators";
+import Navigators from "./src/navigate/Navigators";
 
 export default function App() {
   const image = { uri: "https://react-sheikah-ui.vercel.app/bg-dark.jpg" };

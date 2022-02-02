@@ -9,9 +9,9 @@ import EquipmentScreen from "../screens/EquipmentScreen";
 import MaterialScreen from "../screens/MaterialScreen";
 import TreasureScreen from "../screens/TreasureScreen";
 import MonstersScreen from "../screens/MonstersScreen";
-import CardMonstersDetail from "../monsters/CardMonstersDetail";
-import CardEquipment from "../equipment/CardEquipment";
-import CardEquipmentDetail from "../equipment/CardEquipmentDetail";
+import CardMonstersDetail from "../components/monsters/CardMonstersDetail";
+import CardEquipment from "../components/equipment/CardEquipment";
+import CardEquipmentDetail from "../components/equipment/CardEquipmentDetail";
 
 type Props = {};
 

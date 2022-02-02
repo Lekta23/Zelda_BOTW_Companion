@@ -1,6 +1,6 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import CardMaterials from '../materials/CardMaterials';
+import CardMaterials from '../components/materials/CardMaterials';
 import { useMaterial } from '../hooks/UseMaterial';
 
 type Props = {};

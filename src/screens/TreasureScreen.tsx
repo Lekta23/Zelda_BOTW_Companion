@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { useTreasure } from '../hooks/useTreasure';
-import CardTreasure from '../treasure/CardTreasure';
+import CardTreasure from '../components/treasure/CardTreasure';
 
 type Props = {};
 

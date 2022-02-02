@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { useMonsters } from "../hooks/UseMonsters";
-import CardMonsters from "../monsters/CardMonsters";
+import CardMonsters from "../components/monsters/CardMonsters";
 
 type Props = {};
 
