@@ -7,8 +7,12 @@ type Props = {
 };
 
 const CardMonstersDetail = ({ route, navigation }: Props) => {
+  
   const { id, common_locations, description, image, name, drops } =
     route.params.item;
+
+    console.log(route.params.item);
+    
 
   return (
     <View>

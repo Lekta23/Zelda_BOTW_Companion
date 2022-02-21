@@ -13,12 +13,15 @@ type MonstersProps = {
   drop: Array<String>;
 };
 
-const CardMonsters = ({item}: any) => {
+const CardMonsters = ({ item }: any) => {
   const navigation = useNavigation();
   return (
-    <Card style={styles.card}         onPress={() =>
-      navigation.navigate(AppRoutes.MONSTERSDETAIL_SCREEN, { item })
-    }>
+    <Card
+      style={styles.card}
+      onPress={() =>
+        navigation.navigate(AppRoutes.MONSTERSDETAIL_SCREEN, { item })
+      }
+    >
       <Card.Cover source={{ uri: item.image }} />
       <Card.Title titleStyle={styles.text} title={item.name} />
       <Card.Content>

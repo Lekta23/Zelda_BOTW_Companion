@@ -12,11 +12,51 @@ import MonstersScreen from "../screens/MonstersScreen";
 import CardMonstersDetail from "../components/monsters/CardMonstersDetail";
 import CardEquipment from "../components/equipment/CardEquipment";
 import CardEquipmentDetail from "../components/equipment/CardEquipmentDetail";
+import { BottomNavigation } from "react-native-paper";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+
+
 
 type Props = {};
 
 const Navigators = (props: Props) => {
+
+  const [index, setIndex] = React.useState(0);
+  const [routes] = React.useState([
+    { key: 'Monsters', title: 'Monsters', icon: 'queue-music' },
+    { key: 'Creatures', title: 'Creatures', icon: 'album' },
+    { key: 'recents', title: 'Recents', icon: 'history' },
+  ]);
+
+  const renderScene = BottomNavigation.SceneMap({
+    Monsters: MonstersScreen ,
+    Creatures: CreaturesScreen,
+  });
   const Stack = createNativeStackNavigator();
+  const Tab = createMaterialBottomTabNavigator();
+
+  const MonsterNavigator = () => {
+    return (
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+          presentation: "modal",
+        }}
+      >
+        <Stack.Screen
+          name={AppRoutes.MONSTERS_SCREEN}
+          component={MonstersScreen}
+          // component={StarshipFeedExampleScreen}
+        />
+        <Stack.Screen
+          name={AppRoutes.MONSTERSDETAIL_SCREEN}
+          component={CardMonstersDetail}
+        />
+      </Stack.Navigator>
+    );
+  };
+
+
   return (
     <>
       <NavigationContainer>

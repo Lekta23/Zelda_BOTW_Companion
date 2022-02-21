@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import { QueryClient, QueryClientProvider } from "react-query";
+import BottomNavigationBar from "./src/navigate/BottomNavigationBar";
 import Navigators from "./src/navigate/Navigators";
 
 export default function App() {
@@ -27,7 +28,8 @@ export default function App() {
           source={image}
           style={styles.backgroundImage}
         >
-          <Navigators />
+          {/* <Navigators /> */}
+          <BottomNavigationBar/>
         </ImageBackground>
       </SafeAreaView>
     </QueryClientProvider>
